@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everlasting</title>
+    <link rel="stylesheet" href="style_index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+</head>
+
+<body>
+
+    <nav>
+
+        <input type="checkbox" id="checkboxOcultar" onchange="ocultarCuadros()" class="check">
+        <label for="checkboxOcultar" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <a href="#" class="enlace">
+            <img src="fotos/everlasting_blanco_.png" alt="logo" class="logo">
+        </a>
+
+        <ul>
+            <li><a href="#" class="active">Inicio</a></li>
+            <li><a href="#">Galeria</a></li>
+            <li><a href="carta.html">Carta</a></li>
+            <li><a href="flores.html">Flores</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="cuadros-container" id="dates">
+    <div class="cuadro" id="dates">
+        <h3>Años Transcurridos</h3>
+        <span id="anios">0</span>
+    </div>
+    
+    <div class="cuadro" id="dates">
+        <h3>Meses Transcurridos</h3>
+        <span id="meses">0</span>
+    </div>
+    
+    <div class="cuadro" id="dates">
+        <h3>Días Transcurridos</h3>
+        <span id="dias">0</span>
+    </div>
+    </div>
+
+    <section>
+     
+    </section>
+
+
+
+    <script>
+      // Fecha de inicio establecida
+      const fechaInicio = new Date('2022-04-11'); // Puedes cambiar esta fecha según tus necesidades
+    
+      // Fecha actual
+      const fechaActual = new Date();
+    
+      // Calcula la diferencia en milisegundos
+      const diferenciaEnMilisegundos = fechaActual - fechaInicio;
+    
+      // Calcula los componentes de la diferencia
+      const milisegundosEnUnDia = 1000 * 60 * 60 * 24;
+      const diasTranscurridos = Math.floor(diferenciaEnMilisegundos / milisegundosEnUnDia);
+      const añosTranscurridos = Math.floor(diasTranscurridos / 365);
+      const mesesTranscurridos = Math.floor(diasTranscurridos / 30) % 12; // Resta los años
+      const diasRestantes = (diasTranscurridos % 30)-11; // Resta los meses
+    
+      ;
+    </script>
+
+
+
+<script>
+    // Simulación de valores para años, meses y días (puedes reemplazar con tus propios cálculos)
+    
+
+    // Actualizar los valores en los cuadros
+    document.getElementById('anios').innerText = añosTranscurridos;
+    document.getElementById('meses').innerText = mesesTranscurridos;
+    document.getElementById('dias').innerText = diasRestantes;
+</script>
+
+<script>
+    function ocultarCuadros() {
+        var checkbox = document.getElementById('checkboxOcultar');
+            var cuadros = document.querySelectorAll('.cuadro');
+
+            cuadros.forEach(function(cuadro) {
+                cuadro.classList.toggle('ocultar', checkbox.checked);
+        });
+    }
+</script>
+    
+</body>
+
+</html>
