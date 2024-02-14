@@ -129,29 +129,6 @@ section{
 
 
 
-.cuadros-container {
-    display: flex;
-    justify-content: space-around; /* Distribuye los cuadros de manera uniforme */
-    position: absolute; /* Posición absoluta en relación con el cuerpo */
-    bottom: 250px; /* Ajusta la distancia desde la parte inferior */
-    width: 100%;
-}
-
-.cuadro {
-    width: 15%;
-    max-width: 300px;
-    margin: 20px;
-    padding: 20px;
-    border: none;
-    border-radius: 10px;
-    text-align: center;
-    box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
-}
-
-.ocultar {
-    visibility: hidden; /* Oculta el cuadro estableciendo la opacidad en 0 */
-}
 
 
 
