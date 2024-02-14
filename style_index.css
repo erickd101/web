@@ -172,7 +172,7 @@ section{
 }
 
 .ocultar {
-    visibility: hidden; /* Oculta el cuadro estableciendo la opacidad en 0 */
+    display: none; /* Oculta el cuadro estableciendo la opacidad en 0 */
 }
 
 h3.texto{
